@@ -1,7 +1,7 @@
 # teste_lindolfo
 
 
-PROEJETO DESENVOLVIDO EM DELPHI XE8.
+PROJETO DESENVOLVIDO EM DELPHI XE8.
 
 Objetivo:
 
@@ -54,6 +54,6 @@ DriverID=MSSQL
 
 COMPILAR
 
-Os arquivo compilados estão na pasta DEBUG e RELEASE do projeto.
+Os arquivos compilados estão na pasta DEBUG e RELEASE do projeto.
 
 
