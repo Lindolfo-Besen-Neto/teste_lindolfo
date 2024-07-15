@@ -1,5 +1,11 @@
 Início do teste> 10/07/2024
 
+PROEJETO DESENVOLVIDO EM DELPHI XE8.
+
+Objetivo:
+
+Visualização de dados de gestão de vendas com comissão por vendedor.
+
 
 Banco de Dados:
 
@@ -31,7 +37,7 @@ SISTEMA:
 
 Delphi XE8 com FastReport
 
-PROJETO Baixar o projeto na pasta C:\Trabalho\Lindolfo\Delphi
+PROJETO Baixar o projeto que esta dentro do repositorio Delphi para a pasta C:\Trabalho\Lindolfo\Delphi
 
 Abrir o projeto TESTE_LINDOLFO, compilar.
 
