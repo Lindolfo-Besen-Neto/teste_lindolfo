@@ -1,10 +1,10 @@
 # teste_lindolfo
 
-PROEJETO DESENVOLVIDO EM DELPHI XE8.
+PROJETO DESENVOLVIDO EM DELPHI XE8.
 
 Objetivo:
 
-Visualização de dados de gestão de vendas com comissão por vendedor.
+Visualização de dados de gestão de vendas com comissão por vendedor em PDF.
 
 
 Banco de Dados:
