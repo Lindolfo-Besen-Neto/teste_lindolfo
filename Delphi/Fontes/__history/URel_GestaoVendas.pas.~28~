@@ -1,0 +1,103 @@
+unit URel_GestaoVendas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Vcl.ComCtrls,
+  frxClass, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, frxExportPDF, frxDBSet, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.JSON, Vcl.DBCtrls;
+
+type
+  TF_Rel_GestaoVendas = class(TForm)
+    dtInicial: TDateTimePicker;
+    lbDataInicial: TLabel;
+    lbDataFinal: TLabel;
+    dtFinal: TDateTimePicker;
+    botGeraRelatorio: TSpeedButton;
+    frxRelatorio: TfrxReport;
+    qryRelatorio: TFDQuery;
+    frxDB: TfrxDBDataset;
+    frxPDF: TfrxPDFExport;
+    qryVendedor: TFDQuery;
+    cbVendedor: TDBLookupComboBox;
+    ckTodosVendedores: TCheckBox;
+    dsqryVendedor: TDataSource;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure botGeraRelatorioClick(Sender: TObject);
+    procedure ckTodosVendedoresClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_Rel_GestaoVendas: TF_Rel_GestaoVendas;
+
+implementation
+
+{$R *.dfm}
+
+uses uDmPrincipal, USessao;
+
+procedure TF_Rel_GestaoVendas.botGeraRelatorioClick(Sender: TObject);
+var
+  aJson: TJSONObject;
+begin
+  qryRelatorio.Close;
+  aJson := TJSONObject.Create;
+  try
+    aJson.AddPair('dtinicial', FormatDateTime( 'dd/mm/yyyy', dtInicial.DateTime ) );
+    aJson.AddPair('dtfinal', FormatDateTime( 'dd/mm/yyyy', dtFinal.DateTime ) );
+    if (not ckTodosVendedores.checked) and (cbvendedor.Text = '') then
+    begin
+      showmessage('Informe um vendedor ou marque a opção todos os vendeores!')
+      exit;
+    end;
+    if cbvendedor.Text <> '' then
+      aJson.AddPair('vendedor_id', cbvendedor.KeyValue);
+
+    //EX.PARÂMETRO JSON: '{"dtinicial":"01/01/2023","dtfinal":"31/12/2023","vendedor_id":"0"}'
+    qryRelatorio.ParamByName('json').AsString := aJson.ToString;
+    qryRelatorio.Open;
+
+    frxRelatorio.PrepareReport;
+    frxrelatorio.ShowReport(true);
+  finally
+    qryRelatorio.Close;
+    FreeAndNil(aJson);
+  end;
+
+
+end;
+
+procedure TF_Rel_GestaoVendas.ckTodosVendedoresClick(Sender: TObject);
+begin
+  if (ckTodosVendedores.Checked) then
+    cbvendedor.KeyValue := null;
+  cbvendedor.enabled := not ckTodosVendedores.Checked;
+end;
+
+procedure TF_Rel_GestaoVendas.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  F_Rel_GestaoVendas := nil;
+  Action := cafree;
+end;
+
+procedure TF_Rel_GestaoVendas.FormShow(Sender: TObject);
+begin
+  //ABRINDO A CONSULTA DE VENDEDOR
+  with qryVendedor do
+  try
+    Close;
+    open;
+  finally
+  end;
+end;
+
+end.

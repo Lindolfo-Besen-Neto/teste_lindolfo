@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/07/10 07:19:38.000.806,=C:\Users\cafi-\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/10 07:20:45.000.378,C:\Trabalho\Lindolfo\Delphi\UPrincipal.pas=C:\Users\cafi-\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/10 07:20:45.000.378,C:\Trabalho\Lindolfo\Delphi\UPrincipal.dfm=C:\Users\cafi-\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2024/07/10 07:21:27.000.567,C:\Trabalho\Lindolfo\Delphi\TESTE_LINDOLFO.dproj=C:\Users\cafi-\OneDrive\Documentos\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2024/07/10 07:28:02.000.922,=C:\Trabalho\Lindolfo\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/07/10 07:29:05.000.070,C:\Trabalho\Lindolfo\Delphi\DM\uDmPrincipal.dfm=C:\Trabalho\Lindolfo\Delphi\Unit1.dfm</Transaction>
+    <Transaction>2024/07/10 07:29:05.000.070,C:\Trabalho\Lindolfo\Delphi\DM\uDmPrincipal.pas=C:\Trabalho\Lindolfo\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/07/10 07:30:48.000.382,C:\Trabalho\Lindolfo\Delphi\Fontes\UPrincipal.dfm=C:\Trabalho\Lindolfo\Delphi\UPrincipal.dfm</Transaction>
+    <Transaction>2024/07/10 07:30:48.000.382,C:\Trabalho\Lindolfo\Delphi\Fontes\UPrincipal.pas=C:\Trabalho\Lindolfo\Delphi\UPrincipal.pas</Transaction>
+    <Transaction>2024/07/10 07:31:04.000.661,C:\Trabalho\Lindolfo\Delphi\Fontes\DM\uDmPrincipal.pas=C:\Trabalho\Lindolfo\Delphi\DM\uDmPrincipal.pas</Transaction>
+    <Transaction>2024/07/10 07:31:04.000.661,C:\Trabalho\Lindolfo\Delphi\Fontes\DM\uDmPrincipal.dfm=C:\Trabalho\Lindolfo\Delphi\DM\uDmPrincipal.dfm</Transaction>
+    <Transaction>2024/07/10 07:59:46.000.507,=C:\Trabalho\Lindolfo\Delphi\Fontes\URel_GestaoVendas.pas</Transaction>
+    <Transaction>2024/07/11 09:55:00.000.535,=C:\Trabalho\Lindolfo\Delphi\Unit1.pas</Transaction>
+    <Transaction>2024/07/11 09:57:48.000.053,C:\Trabalho\Lindolfo\Delphi\Unit1.pas=C:\Trabalho\Lindolfo\Delphi\Fontes\USessao.pas</Transaction>
+  </Transactions>
+</BorlandProject>

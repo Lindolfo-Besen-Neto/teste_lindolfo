@@ -1,0 +1,17 @@
+object DmPrincipal: TDmPrincipal
+  OldCreateOrder = True
+  Height = 750
+  Width = 1000
+  object DBTeste: TFDConnection
+    ConnectionName = 'DBTeste'
+    Params.Strings = (
+      'User_Name=cafi'
+      'Password=einfach'
+      'Server=LINDOLFO\SQLEXPRESS'
+      'Database=CAFI_Usinabras'
+      'Encrypt=No'
+      'DriverID=MSSQL')
+    Left = 72
+    Top = 56
+  end
+end

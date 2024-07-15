@@ -1,0 +1,59 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+
+type
+  TF_Principal = class(TForm)
+    mnMenu: TMainMenu;
+    N1: TMenuItem;
+    mnRelatorios: TMenuItem;
+    mnRel_GestaoVendas: TMenuItem;
+    procedure mnRel_GestaoVendasClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_Principal: TF_Principal;
+
+implementation
+
+{$R *.dfm}
+
+uses URel_GestaoVendas, USessao;
+
+procedure TF_Principal.FormShow(Sender: TObject);
+begin
+  // FUNÇÃO USADA PARA FAZER A CONEXÃO COM O BANCO DE DADOS
+  try
+  if not funcConexao then
+    showmessage('Problema de conexão.');
+  finally
+  end;
+end;
+
+procedure TF_Principal.mnRel_GestaoVendasClick(Sender: TObject);
+begin
+  // VALIDANDO A CONEXÃO ANTES DE ENTRAR NA TELA.
+  try
+  if funcConexao then
+  begin
+    if F_Rel_GestaoVendas = Nil then
+      Application.CreateForm(TF_Rel_GestaoVendas, F_Rel_GestaoVendas);
+    F_Rel_GestaoVendas.Show;
+  end
+  else
+    showmessage('Problema de conexão.');
+
+  finally
+  end;
+end;
+
+end.

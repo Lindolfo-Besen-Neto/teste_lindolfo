@@ -1,0 +1,12 @@
+object DmPrincipal: TDmPrincipal
+  OldCreateOrder = True
+  Height = 750
+  Width = 1000
+  object DBTeste: TFDConnection
+    ConnectionName = 'DBTeste'
+    Params.Strings = (
+      'DriverID=MSSQL')
+    Left = 72
+    Top = 56
+  end
+end

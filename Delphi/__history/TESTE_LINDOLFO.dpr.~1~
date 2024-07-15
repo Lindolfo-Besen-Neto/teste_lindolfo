@@ -1,0 +1,14 @@
+program TESTE_LINDOLFO;
+
+uses
+  Vcl.Forms,
+  UPrincipal in 'UPrincipal.pas' {F_Principal};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TF_Principal, F_Principal);
+  Application.Run;
+end.
