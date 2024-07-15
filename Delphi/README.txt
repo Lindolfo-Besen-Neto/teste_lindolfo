@@ -31,8 +31,10 @@ SISTEMA:
 
 Delphi XE8 com FastReport
 
+PROJETO Baixar o projeto na pasta C:\Trabalho\Lindolfo\Delphi
+
 Abrir o projeto TESTE_LINDOLFO, compilar.
 
-Os arquivo compilados estão na pasta DEBUG e RELEASE do projeto
+Os arquivo compilados estão na pasta DEBUG e RELEASE do projeto.
 
 
