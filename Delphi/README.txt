@@ -53,6 +53,6 @@ DriverID=MSSQL
 
 COMPILAR
 
-Os arquivo compilados estão na pasta DEBUG e RELEASE do projeto.
+Os arquivos compilados estão na pasta DEBUG e RELEASE do projeto.
 
 
