@@ -1,10 +1,11 @@
 # teste_lindolfo
 
-PROJETO DESENVOLVIDO EM DELPHI XE8.
+
+PROEJETO DESENVOLVIDO EM DELPHI XE8.
 
 Objetivo:
 
-Visualização de dados de gestão de vendas com comissão por vendedor em PDF.
+Visualização de dados de gestão de vendas com comissão por vendedor.
 
 
 Banco de Dados:
@@ -39,7 +40,19 @@ Delphi XE8 com FastReport
 
 PROJETO Baixar o projeto que esta dentro do repositorio Delphi para a pasta C:\Trabalho\Lindolfo\Delphi
 
-Abrir o projeto TESTE_LINDOLFO, compilar.
+Abrir o projeto TESTE_LINDOLFO.
+
+Abrir o datamodulo <uDmPrincipal>.
+
+Alterar os parametros de conexão do FDconnection (DBTeste):
+User_Name=lindolfo_user
+Password=lindolfo_pwd
+Server=CAFI-DEVELOPER\SQLEXPRESS (SUBSTITUA AQUI PELO NOME DE SEU SERVIDOR\INSTÂNCIA)
+Database=TESTE_LINDOLFO
+Encrypt=No
+DriverID=MSSQL
+
+COMPILAR
 
 Os arquivo compilados estão na pasta DEBUG e RELEASE do projeto.
 
